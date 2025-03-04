@@ -5,7 +5,7 @@ This repo has code for foundations of C plus plus.
 
 ### Modern C++ vs C++ standard
 
-### Structure of a C## program
+### Structure of a C++ program
 
 ### Variables & Constants
 
