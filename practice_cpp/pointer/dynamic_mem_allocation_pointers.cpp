@@ -35,7 +35,6 @@ int main () {
 
     std::cout << vector_ptr << std::endl;
     std::cout << (*vector_ptr)[0] << std::endl;
-
     delete vector_ptr;
 
 
