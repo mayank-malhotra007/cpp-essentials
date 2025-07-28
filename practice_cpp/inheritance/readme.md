@@ -12,6 +12,8 @@
 -  protected members are inherited and are protected in the derived class  (not Is-A)
 -  protected members cant be accessed using objects of base or derived class
 -  public members are inherited and are public in derived class
+-  derived classes do not inherit base class constructors, destructors, base class friend    functions, overloaded assignment operators.
+
 
 
 **Class A {}** // base class, or super class or parent class
