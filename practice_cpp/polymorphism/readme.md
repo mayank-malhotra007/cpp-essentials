@@ -18,3 +18,4 @@ though they are instances of derived class.
 - final specfier: at class level prevents the class from being derived from, at function level: function cant be overriden
 - final: prevents inheritance, prevents overriding
 - abstract: class must be inherited and completed, uses pure virtual functions
+- abstract classes are used in C++ to create interfaces
