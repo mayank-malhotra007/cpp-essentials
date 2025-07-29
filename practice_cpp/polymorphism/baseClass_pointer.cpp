@@ -1,4 +1,7 @@
 
+// Virtual function and Override //
+
+
 #include<iostream>
 #include<vector>
 
@@ -6,8 +9,8 @@ class Account{
 
     public:
 
-    // NOTE: virtual keyword activates dynamic binding
-    virtual void withdraw(int amount)
+    // NOTE: virtual keyword activates dynamic binding, polymorphism
+     virtual void withdraw(int amount)
     {
         std::cout << "from account withdrawn: " << amount << std::endl;
     }
@@ -21,7 +24,7 @@ class Savings : public Account{
 
     public:
 
-     void withdraw(int amount)
+     void withdraw (int amount) override
     {
         std::cout << "from savings withdrawn: " << amount << std::endl;
     }
@@ -33,7 +36,7 @@ class Checking : public Account{
 
     public:
 
-     void withdraw(int amount)
+     void withdraw (int amount) override
     {
         std::cout << "from checking withdrawn: " << amount << std::endl;
     }
@@ -46,7 +49,7 @@ class Trust : public Savings {
 
     public:
 
-     void withdraw(int amount)
+     void withdraw (int amount) override
     {
         std::cout << "from trust withdrawn: " << amount << std::endl;
     }
