@@ -18,7 +18,7 @@ int main()
     try {
         if(total == 0)
         {
-            throw 0;
+            throw 0; // exception thrown here
         }
         else
         {
