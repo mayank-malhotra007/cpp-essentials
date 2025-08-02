@@ -1,0 +1,39 @@
+name: C++ CI (practice_cpp folders)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install g++
+        run: sudo apt-get update && sudo apt-get install -y g++
+
+      - name: Build each subfolder into its own executable
+        run: |
+          mkdir -p build
+          for dir in practice_cpp/*; do
+            if [ -d "$dir" ]; then
+              exe_name=$(basename "$dir")
+              cpp_files=$(find "$dir" -name "*.cpp")
+              if [ -n "$cpp_files" ]; then
+                echo "=== Compiling $exe_name ==="
+                g++ -std=c++17 -O2 -Wall $cpp_files -o "build/$exe_name"
+              else
+                echo "Skipping $exe_name (no .cpp files)"
+              fi
+            fi
+          done
+
+      - name: Upload compiled executables
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpp-binaries
+          path: build/
