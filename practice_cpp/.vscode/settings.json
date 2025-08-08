@@ -47,6 +47,7 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "iomanip": "cpp"
     }
 }
