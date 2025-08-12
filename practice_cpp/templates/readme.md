@@ -41,3 +41,32 @@ Templates serve as a blueprint for a class or a function.
 - scoped to function or class
 - compiler gives meaningful errors
 - no unpredictable behaviour
+
+## Containers
+
+Containers are class templates that hold object of a specific type.
+
+- saves time, ready to use data structures
+- consistency
+- make use of STL itertors and algorithms
+
+### Categories of Containers
+
+#### Sequence Containers
+- std::vector
+- std::deque
+- std::list
+- std::forward_list
+- std::array
+
+#### Associative Containers
+- std::set
+- std::map
+- std::multiset
+- std::multimap
+
+#### Container Adaptors
+- std::stack
+- std::queue
+- std::priority_queue
+
