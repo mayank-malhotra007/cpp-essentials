@@ -70,3 +70,11 @@ Containers are class templates that hold object of a specific type.
 - std::queue
 - std::priority_queue
 
+##### Vectors vs Arrays
+
+- vectors are dynamic in nature, can grow and shrink at runtime, arrays can be static where the size is fixed at the compile time or dynamic. 
+- vectors are always on the heap, static arrays on stack and dynamic arrays on the heap.
+- vectors provide bounds checking using .at(), arrays do not
+- vector are a part of the STL, hence algorithms such as resize(), etc are available, not for arrays.
+- vectors provide autotic memory management, if using dynamic arrays using new[], programmer needs to take care of the pointer memory.
+- use arrays when at compile time the size is knows, use vectors for flexibility and safety
